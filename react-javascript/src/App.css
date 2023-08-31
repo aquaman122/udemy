@@ -1,0 +1,67 @@
+body {
+  background-color: #222222;
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  padding-right: 10px;
+}
+
+.header__title {
+  color: #41D7F4;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.header__text {
+  color: #76969C;
+  font-size: 20px;
+}
+
+.main__title {
+  padding-top: 20px;
+}
+
+.main__title > button {
+  font: inherit;
+  font-size: 0.85rem;
+  background-color: #282f33;
+  border: none;
+  border-bottom-color: #f3e248;
+  color: #e0eff1;
+  border-radius: 4px 4px 0 0;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+button:hover,
+button.active {
+  background-color: #41D7F4;
+  color: #002237;
+}
+
+#tab-content {
+  display: flex;
+  align-items: center;
+  color: #A8B5BD;
+  background-color: #1E242C;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  width: 460px;
+  height: 180px;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  line-height: 2.0;
+}

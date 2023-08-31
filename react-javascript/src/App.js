@@ -1,5 +1,6 @@
 import './App.css';
-import reactLogo from '../src/public/images.png';
+import { useState } from 'react';
+import reactLogo from '../src/images/images.png';
 
 const content = [
   [
@@ -27,13 +28,34 @@ const content = [
 ];
 
 function App() {
-  
+  const [activeContentIndex, setActiveContentIndex] = useState(0);
   return (
    <>
     <header>
-      <img src={reactLogo} />
-      <div></div>
+      <img src={reactLogo} alt="logo"/>
+      <div>
+        <div className="header__title">React.js</div>
+        <div className="header__text">i.e., using the React library for rendering the UI</div>
+      </div>
     </header>
+
+    <div className="main__title">
+      <button className={activeContentIndex === 0 ? "active" : ""} 
+        onClick={() => setActiveContentIndex(0)}>Why React?</button>
+      <button className={activeContentIndex === 1 ? "active" : ""}
+        onClick={() => setActiveContentIndex(1)}>Core Features</button>
+      <button className={activeContentIndex === 2 ? "active" : ""}
+        onClick={() => setActiveContentIndex(2)}>Related Resources</button>
+      <button className={activeContentIndex === 3 ? "active" : ""}
+        onClick={() => setActiveContentIndex(3)}>Why Sukwon?</button>
+    </div>
+      <div id="tab-content">
+        <ul>
+          {content[activeContentIndex].map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
    </>
   );
 }
