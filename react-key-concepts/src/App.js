@@ -44,11 +44,6 @@ function App() {
               <p>{item.description}</p>
             </li>
           ))}
-          {/* <li className="concept">
-            <img src="TODO: TITLE" alt="TODO: TITLE" />
-              <h2>TODO: TITLE</h2>
-              <p>TODO: DESCRIPTION</p>
-          </li> */}
         </ul>
       </div>
     </>
