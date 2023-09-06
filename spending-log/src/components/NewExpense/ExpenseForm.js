@@ -36,9 +36,9 @@ export default function ExpenseForm(props) {
     props.onSavaExpenseData(expenseData);
 
     setUserInput({
-      title: '',
-      amount: '',
-      date : ''
+      enteredTitle: '',
+      enteredAmount: '',
+      enteredDate : ''
     });
   };
 
@@ -48,15 +48,15 @@ export default function ExpenseForm(props) {
         <div className="new-expense__controls">
           <div className="new-expense__control">
             <label>Title</label>
-            <input type="text" onChange={onTitleHandler}  />
+            <input type="text" value={userInput.enteredTitle} onChange={onTitleHandler}  />
           </div>
           <div className="new-expense__control">
             <label>Amount</label>
-            <input type="number" onChange={onAmountHandler} min="0.01" step="0.01" />
+            <input type="number" value={userInput.enteredAmount} onChange={onAmountHandler} min="0.01" step="0.01" />
           </div>
           <div className="new-expense__control">
             <label>Date</label>
-            <input type="date" onChange={onDateHandler} min="2021-01-01" max="2023-12-31" />
+            <input type="date" value={userInput.enteredDate} onChange={onDateHandler} min="2021-01-01" max="2023-12-31" />
           </div>
         </div>
         <div className="new-expense__action">
