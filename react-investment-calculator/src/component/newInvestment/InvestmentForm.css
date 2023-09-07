@@ -1,0 +1,54 @@
+.investment-form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  background-color: #247D64;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.investment-form__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.investment-form__inputs p {
+  font-size: 12px;
+  margin-bottom: 1px;
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+}
+
+.investment-form__inputs input {
+  width: 13.5rem;
+  height: 2.3rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: inherit;
+}
+.investment-form__buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.investment-form__buttons button {
+  padding: 0.7rem 1.7rem;
+  color: #fff;
+  font-size: 14px;
+}
+
+.investment-form__buttons button:first-child {
+  border: none;
+  background-color: inherit;
+}
+
+.investment-form__buttons button:last-child {
+  border: none;
+  background-color: #10463B;
+  border-radius: 5px;
+  margin-left: 20px;
+}
