@@ -7,6 +7,7 @@ export default function ExpenseForm(props) {
     enteredAmount: '',
     enteredDate: ''
   })
+  const [isDating, setIsDating] = useState(false);
 
   const onTitleHandler = (event) => {
     setUserInput((prevState) => {
@@ -40,11 +41,18 @@ export default function ExpenseForm(props) {
       enteredAmount: '',
       enteredDate : ''
     });
+    setIsDating(false);
   };
+
+  const onConditionHandler = (event) => {
+    setIsDating(false);
+  }
 
   return (
     <>
       <form onSubmit={onSumbitHandler}>
+        {isDating === true ? (
+        <>
         <div className="new-expense__controls">
           <div className="new-expense__control">
             <label>Title</label>
@@ -60,8 +68,17 @@ export default function ExpenseForm(props) {
           </div>
         </div>
         <div className="new-expense__action">
+          <button onClick={onConditionHandler} className='new-expense__cancel'>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>
+        </>) : 
+        (
+        <div>
+          <div className="new-expense__action">
+            <button onClick={() => {setIsDating(true)}}>Add New Expense</button>
+          </div>
+        </div>
+        )}
       </form>
     </>
   )

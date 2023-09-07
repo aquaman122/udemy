@@ -8,7 +8,7 @@ function App() {
 
   const addExpenseDataHandler = (expense) => {
     setExpenses((prevExpenses) => {
-      return [...prevExpenses, expense];
+      return [expense, ...prevExpenses];
     })
   }
     
