@@ -1,0 +1,16 @@
+.GoalList-ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.GoalList-li {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  width: 50rem;
+  height: 3.3rem;
+  background-color: #951060;
+  margin-bottom: 1rem;
+  color: #fff;
+}
