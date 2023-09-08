@@ -5,12 +5,12 @@ import Card from "../component/UI/Card";
 import ErrorModal from './UI/ErrorModal';
 
 export default function UserForm(props) {
-  const [isDating, setIsDating] = useState(false);
   const [userInput, setUserInput] = useState({
     enteredUserName: '',
     enteredAge: '',
     id: ''
   });
+  const [error, setError] = useState();
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -21,8 +21,18 @@ export default function UserForm(props) {
       id: Math.random().toString()
     }
 
-    if (!userData.username || +userData.age < 0 || +userData.age > 150) {
-      setIsDating(true);
+    if (userInput.enteredUserName.trim().length === 0 || userInput.enteredUserName.trim().length === 0) {
+      setError({
+        title: 'Invalid input',
+        message: 'Please enter a valid name and age (non-empty values).',
+      });
+      return;
+    }
+    if (+userInput.enteredAge < 1) {
+      setError({
+        title: 'Invalid age',
+        message: 'Please enter a valid age (> 0).',
+      });
       return;
     }
 
@@ -35,9 +45,13 @@ export default function UserForm(props) {
     })
   }
 
+  const errorHandler = () => {
+    setError(null);
+  }
+
   return (
     <>
-      <ErrorModal title="An error occured!" message="Something went wrong!" />
+      {error && <ErrorModal onConfirm={errorHandler} title='Invalid input' message='Please enter a valid name and age (non-empty values).' />}
       <Card>
         <form onSubmit={onSubmitHandler}>
           <div className="user-form__input">
