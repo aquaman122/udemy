@@ -1,0 +1,28 @@
+.user-form__input p {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.user-form__input input{
+  width: 90%;
+  height: 1.5rem;
+}
+
+.user-form__button {
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  padding: 5px 15px;
+  background-color: #42014E;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.form-error__container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #000000;
+}

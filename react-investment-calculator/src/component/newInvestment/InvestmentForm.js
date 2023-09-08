@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import './InvestmentForm.css';
 
+const initialValue = {
+  enteredCurrentSaving: 10000,
+  enteredYearlySaving: 1200,
+  enteredExpectedInterest: 5,
+  enteredInvestmentDuration: 15,
+  id: Math.random().toString()
+}
+
 export default function InvestmentForm(props) {
-  const [userInput, setUserInput] = useState({
-    enteredCurrentSaving: '',
-    enteredYearlySaving: '',
-    enteredExpectedInterest: '',
-    enteredInvestmentDuration: '',
-    id: '',
-  })
+  const [userInput, setUserInput] = useState(initialValue)
 
   const onChangeCurrentSaving = (event) => {
     setUserInput({
@@ -60,13 +62,7 @@ export default function InvestmentForm(props) {
 
   const onClickReset = (event) => {
     event.preventDefault();
-    setUserInput({
-      enteredCurrentSaving: '',
-      enteredYearlySaving: '',
-      enteredExpectedInterest: '',
-      enteredInvestmentDuration: '',
-      id: ''
-    });
+    setUserInput(initialValue);
   }
 
   return (
