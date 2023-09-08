@@ -5,7 +5,7 @@
   width: 30rem;
   background-color: #247D64;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 3px;
 }
 
 .investment-form__inner {
@@ -27,6 +27,7 @@
   border: 1px solid #fff;
   border-radius: 5px;
   background-color: inherit;
+  color: #fff;
 }
 .investment-form__buttons {
   margin-top: 20px;
