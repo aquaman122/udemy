@@ -1,0 +1,33 @@
+header {
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background-color: #8B2B03;
+}
+
+.header-logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header-cart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  background-color: #4E1600;
+  width: 14rem;
+  height: 3rem;
+  border-radius: 2rem;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-cart__count {
+  padding: 5px 15px;
+  background-color: #B94419;
+  border-radius: 15px;
+}
