@@ -4,6 +4,7 @@ import Card from './Card';
 
 export default function MealItem(props) {
   const [amount, setAmount] = useState(1);
+  const [count, setCount] = useState();
 
   return (
     <>
