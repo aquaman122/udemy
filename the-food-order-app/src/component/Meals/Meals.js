@@ -7,7 +7,7 @@ export default function Meals() {
   return (
     <>
       <div className="meal-container">
-        {/* <MealsSummery /> */}
+        <MealsSummery />
         <AvailableMeals />
       </div>
     </>
